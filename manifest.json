@@ -1,0 +1,24 @@
+{
+	"manifest_version":2,
+	"name":"HTML Tagsy",
+	"version":"0.0.1.1",
+    "description":"Displays webpage HTML tag stats",
+	"permissions": [ 
+		"tabs"
+	],
+	
+	"browser_action":{
+		"default_title":"HTML Tagsy",
+		"default_popup":"popup.html"
+	},
+	
+	"content_scripts":[{
+		"js":[
+			"js/app/content.js"		
+		],
+		"matches":[
+			"<all_urls>"	
+		],
+		"run_at":"document_end"
+	}]	
+}
