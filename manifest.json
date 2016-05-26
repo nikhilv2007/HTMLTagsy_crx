@@ -8,8 +8,14 @@
 	],
 	
 	"browser_action":{
+        "default_icon":"images/tagsy128.png",
 		"default_title":"HTML Tagsy",
 		"default_popup":"popup.html"
+	},
+	
+    "icons":{
+    	"128": "images/tagsy128.png",
+        "48": "images/tagsy48.png"
 	},
 	
 	"content_scripts":[{

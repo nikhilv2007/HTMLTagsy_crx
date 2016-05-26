@@ -4,12 +4,12 @@ window.addEventListener('load',function(){
     chrome.tabs.query({'highlighted': true, 'active': true}, function(activeTab) {
 		chrome.tabs.sendMessage(activeTab[0].id,{action:'getTagsCount'},function(tagsData){
             try{
-                console.log(tagsData);
+                //console.log(tagsData);
                 visualizePi(transformData(tagsData));
             }
             catch(err){                
                 document.getElementById("progress").innerHTML = "Error occured" ;
-                console.log(err);
+                //console.log(err);
             }
             
 		});

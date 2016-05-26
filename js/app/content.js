@@ -2,14 +2,14 @@ var tagsData = [];
 
 chrome.extension.onMessage.addListener(function(request, sender, callback){
 	
-    console.log("Tag Metrics : Starting");
+    //console.log("Tag Metrics : Starting");
     
     if (request.action == 'getTagsCount'){
         computeTagMetrics(document.childNodes[document.childNodes.length-1]);        
     }
     
-    console.log("Tag Metrics : Completed");
-    console.log(tagsData);
+    //console.log("Tag Metrics : Completed");
+    //console.log(tagsData);
     
     callback(tagsData);
 })
